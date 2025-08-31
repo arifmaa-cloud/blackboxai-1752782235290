@@ -372,6 +372,28 @@ body {
     line-height: 1.6;
 }
 
+.danger-details {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.danger-details li {
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.danger-details li::before {
+    content: '•';
+    color: #e74c3c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 /* Organ Animation */
 .organ-animation {
     display: flex;
@@ -434,6 +456,63 @@ body {
         opacity: 0.3;
         transform: translate(-50%, -50%) scale(0.8);
     }
+}
+
+/* Impact Sections */
+.impact-section {
+    margin-top: 60px;
+}
+
+.impact-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.impact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-left: 4px solid #e74c3c;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-time {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.impact-card h4 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 /* Myth vs Fact */
@@ -610,6 +689,108 @@ body {
     left: 0;
 }
 
+/* Statistics Section */
+.statistics-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.statistics-section h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.stat-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Protection Tips */
+.protection-tips {
+    margin-top: 60px;
+}
+
+.protection-tips h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tip-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card i {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.tip-card h4 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* Economic Impact */
 .economic-impact {
     display: grid;
@@ -758,6 +939,116 @@ body {
     line-height: 1.6;
 }
 
+/* National Impact */
+.national-impact {
+    margin-top: 60px;
+}
+
+.national-impact h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.national-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.national-stat {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.national-stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: #e74c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.stat-content h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 5px;
+}
+
+.stat-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Environmental Impact */
+.environmental-impact {
+    margin-top: 60px;
+}
+
+.environmental-impact h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.env-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.env-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.env-item:hover {
+    transform: translateY(-5px);
+}
+
+.env-item i {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.env-item h4 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.env-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* CTA Section */
 .cta-section {
     background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
@@ -891,6 +1182,62 @@ body {
     color: #333;
 }
 
+/* Disease Categories */
+.disease-categories {
+    margin-top: 40px;
+}
+
+.disease-category {
+    margin-bottom: 60px;
+}
+
+.disease-category h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.disease-category h3 i {
+    color: #e74c3c;
+    font-size: 1.5rem;
+}
+
+.disease-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.disease-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #e74c3c;
+}
+
+.disease-item:hover {
+    transform: translateY(-5px);
+}
+
+.disease-item h4 {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.disease-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -965,6 +1312,26 @@ body {
 
     .section-header h2 {
         font-size: 2rem;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .national-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .env-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .disease-grid {
+        grid-template-columns: 1fr;
     }
 }
 

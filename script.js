@@ -77,11 +77,13 @@ function updateCosts() {
     const dailyCost = packsPerDay * pricePerPack;
     const monthlyCost = dailyCost * 30;
     const yearlyCost = dailyCost * 365;
+    const tenYearCost = yearlyCost * 10;
     
     // Update display
     document.getElementById('daily-cost').textContent = formatCurrency(dailyCost);
     document.getElementById('monthly-cost').textContent = formatCurrency(monthlyCost);
     document.getElementById('yearly-cost').textContent = formatCurrency(yearlyCost);
+    document.getElementById('ten-year-cost').textContent = formatCurrency(tenYearCost);
 }
 
 function formatCurrency(amount) {
@@ -221,6 +223,64 @@ function showHealthTips() {
             <blockquote>
                 "Kesehatan adalah investasi terbaik yang bisa kamu lakukan untuk diri sendiri."
             </blockquote>
+        </div>
+    `;
+    
+    showModal(content);
+}
+
+// Show quit plan
+function showQuitPlan() {
+    const content = `
+        <h2><i class="fas fa-calendar-check"></i> Rencana Berhenti Merokok</h2>
+        <div class="quit-plan">
+            <div class="plan-phase">
+                <h3>Fase Persiapan (1-2 minggu sebelum berhenti)</h3>
+                <ul>
+                    <li>Catat kapan dan mengapa kamu merokok</li>
+                    <li>Identifikasi pemicu merokok</li>
+                    <li>Beritahu keluarga dan teman tentang rencana berhenti</li>
+                    <li>Buat daftar alasan untuk berhenti</li>
+                    <li>Pilih tanggal berhenti yang spesifik</li>
+                </ul>
+            </div>
+            <div class="plan-phase">
+                <h3>Fase Berhenti (Hari-H)</h3>
+                <ul>
+                    <li>Buang semua rokok dan asbak</li>
+                    <li>Hindari tempat dan situasi yang memicu merokok</li>
+                    <li>Gunakan teknik relaksasi saat keinginan merokok muncul</li>
+                    <li>Minum banyak air putih</li>
+                    <li>Olahraga untuk mengurangi stres</li>
+                </ul>
+            </div>
+            <div class="plan-phase">
+                <h3>Fase Pemeliharaan (Setelah berhenti)</h3>
+                <ul>
+                    <li>Rayakan pencapaian kecil</li>
+                    <li>Hindari "hanya satu batang"</li>
+                    <li>Teruskan aktivitas pengganti</li>
+                    <li>Bergabung dengan grup dukungan</li>
+                    <li>Konsultasi dengan dokter jika diperlukan</li>
+                </ul>
+            </div>
+            <div class="motivation-section">
+                <h3>Tips Mengatasi Gejala Penarikan</h3>
+                <div class="symptom-tips">
+                    <div class="symptom-tip">
+                        <strong>Keinginan merokok:</strong> Minum air, olahraga, atau lakukan aktivitas lain
+                    </div>
+                    <div class="symptom-tip">
+                        <strong>Iritabilitas:</strong> Teknik pernapasan dalam dan relaksasi
+                    </div>
+                    <div class="symptom-tip">
+                        <strong>Kesulitan tidur:</strong> Hindari kafein, buat rutinitas tidur yang nyaman
+                    </div>
+                    <div class="symptom-tip">
+                        <strong>Peningkatan nafsu makan:</strong> Pilih makanan sehat, kunyah permen karet
+                    </div>
+                </div>
+            </div>
         </div>
     `;
     
@@ -375,6 +435,65 @@ const modalStyles = `
             color: #e74c3c;
             border-left: 4px solid #e74c3c;
             padding-left: 20px;
+        }
+        
+        .quit-plan {
+            margin: 20px 0;
+        }
+        
+        .plan-phase {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .plan-phase h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .plan-phase ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .plan-phase li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+        }
+        
+        .plan-phase li::before {
+            content: '✓';
+            color: #e74c3c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .motivation-section {
+            margin-top: 30px;
+        }
+        
+        .motivation-section h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .symptom-tips {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .symptom-tip {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #e74c3c;
         }
         
         @media (max-width: 768px) {
